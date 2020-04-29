@@ -1,0 +1,107 @@
+@import "../../../static/scss/base.scss";
+
+.profile-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  height: 90px;
+
+  .photo {
+    width: 142px;
+    height: 90px;
+    background-color: $grey;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 2px solid $orange-primary;
+    height: 100%;
+
+    @include screen-md {
+      min-width: 80px;
+      max-width: 80px;
+    }
+
+    img {
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      object-fit: contain;
+
+      @include screen-md {
+        width: 56px;
+        height: 56px;
+      }
+    }
+  }
+  .details {
+    flex: 1;
+    height: 100%;
+    border-bottom: 2px solid $grey;
+    padding: 0 26px 0 20px;
+    display: flex;
+    align-items: center;
+
+    @include screen-md {
+      justify-content: flex-end;
+    }
+    @include screen-sm {
+      justify-content: flex-start;
+    }
+
+    .name-and-email {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      @include screen-md {
+        width: auto;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .full-name {
+        margin-left: 20px;
+
+        @include screen-md {
+          margin: 0;
+        }
+
+        span {
+          color: $black;
+          font-family: "Wigrum - Regular";
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 24px;
+        }
+      }
+      .email {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+
+        span {
+          height: 12px;
+          opacity: 0.5;
+          color: $black;
+          font-size: 10px;
+          font-weight: 400;
+          font-family: "Wigrum - Regular";
+
+          @include screen-md {
+            display: none;
+          }
+        }
+        p {
+          color: $orange-darker;
+          font-family: "Wigrum - Regular";
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 24px;
+          margin: 0;
+        }
+      }
+    }
+  }
+}

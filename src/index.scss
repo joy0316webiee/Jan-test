@@ -1,0 +1,18 @@
+@import "./static/scss/base.scss";
+
+// common styles
+* {
+  box-sizing: border-box;
+
+  &:focus {
+    outline: none !important;
+    box-shadow: none !important;
+  }
+}
+
+body {
+  min-width: 320px;
+  margin: 0 auto;
+  padding: 0;
+  font-family: "Wigrum - Regular";
+}

@@ -1,0 +1,115 @@
+@import "../../static/scss/base.scss";
+
+.navbar-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  .left-menu {
+    margin: 27px 0 0 30px;
+    padding-left: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+
+    @include screen-md {
+      display: none;
+    }
+
+    li {
+      opacity: 0.75;
+      color: $black;
+      font-family: "Wigrum - Regular";
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 24px;
+      margin-right: 22px;
+      cursor: pointer;
+    }
+  }
+  .right-menu {
+    margin: 20px 30px 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    @include screen-md {
+      margin: 10px 20px;
+      padding: 0;
+      width: 100%;
+      justify-content: space-between;
+    }
+
+    li {
+      svg:hover {
+        cursor: pointer;
+
+        path {
+          stroke: #cd845c;
+        }
+      }
+
+      &.profile {
+        margin-right: 38px;
+        display: flex;
+        align-items: center;
+
+        img {
+          width: 36px;
+          height: 36px;
+          object-fit: contain;
+        }
+        span {
+          color: $black;
+          font-family: "Wigrum - Regular";
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 24px;
+          margin-left: 10px;
+        }
+      }
+      &.bell {
+        display: flex;
+        align-items: center;
+        margin-right: 20px;
+
+        @include screen-md {
+          margin-right: 35px;
+        }
+
+        svg {
+          width: 16px;
+          height: 22px;
+          object-fit: contain;
+        }
+        span {
+          font-size: 12px;
+          font-weight: 700;
+          font-family: "Wigrum - Bold";
+          margin-left: 2px;
+        }
+      }
+      &.hamburger {
+        display: flex;
+        align-items: center;
+
+        @include screen-md {
+          position: absolute;
+          right: 20px;
+        }
+
+        svg {
+          width: 13px;
+          height: 13px;
+          object-fit: contain;
+        }
+      }
+    }
+  }
+}

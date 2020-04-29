@@ -1,0 +1,132 @@
+@import "../static/scss/base.scss";
+
+.home-container {
+  display: flex;
+  min-height: 100vh;
+  height: 1024px;
+  overflow: hidden;
+  position: relative;
+
+  @include screen-lg {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .left-panel {
+    flex-basis: 50%;
+    background-color: $orange-primary;
+    height: 100%;
+    padding-top: 197px;
+    text-align: center;
+
+    @include screen-lg {
+      padding-bottom: 30px;
+    }
+    @include screen-md {
+      padding-top: 70px;
+    }
+
+    .content {
+      h1 {
+        max-width: 320px;
+        color: $black;
+        font-family: "Wigrum - Regular";
+        font-size: 31px;
+        font-weight: 400;
+        margin: 0 auto;
+      }
+      div {
+        margin: 110px 11px 0;
+        height: 294px;
+        background: url("../static/images/bg.png") 50% 60% / contain no-repeat;
+
+        @include screen-md {
+          margin: 40px 0;
+        }
+        @include screen-sm {
+          margin: 0px;
+          background-size: 120% auto;
+        }
+        @include screen-xs {
+          margin: -40px 0;
+        }
+      }
+      a {
+        margin: 33px auto 0;
+        background: transparent;
+        width: 211px;
+        height: 50px;
+        border: 2px solid $black;
+        color: $black;
+        font-family: "Wigrum - Regular";
+        font-size: 18px;
+        font-weight: 400;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 15px 0;
+        cursor: pointer;
+
+        @include screen-md {
+          margin-top: 35px;
+        }
+      }
+    }
+    .footer {
+      margin-top: 134px;
+
+      @include screen-md {
+        display: none;
+      }
+
+      h3 {
+        color: $black;
+        font-family: "Wigrum - Bold";
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        text-align: center;
+      }
+      p {
+        opacity: 0.75;
+        color: $black;
+        font-family: "Wigrum - Regular";
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 24px;
+        margin: 10px auto;
+        width: 550px;
+      }
+    }
+  }
+
+  .right-panel {
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 76px 30px 0;
+
+    @include screen-md {
+      padding: 30px 20px;
+    }
+
+    h2 {
+      margin: 0;
+      font-family: "Wigrum - Medium";
+      font-size: 22px;
+      font-weight: 500;
+    }
+    p {
+      font-family: "Wigrum - Regular";
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 24px;
+      opacity: 0.75;
+      color: $black;
+      margin-top: 12px;
+    }
+  }
+}
